@@ -1,13 +1,20 @@
 {
-  "name": "agnost",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "agnost-integrations",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Agnost AI integration adapters for Vercel AI SDK, Mastra, and OpenAI Agents SDK",
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:all": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "eslint packages/*/src --ext .ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.12.4"
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.59.4",
+    "@typescript-eslint/parser": "^8.59.4",
+    "eslint": "^10.4.0",
+    "vitest": "^4.1.7"
+  }
 }
