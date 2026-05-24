@@ -1,12 +1,41 @@
 {
-  "name": "vercel",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@agnost/vercel-ai",
+  "version": "0.1.0",
+  "description": "Agnost AI integration for Vercel AI SDK",
+
+  "private": false,
+
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+
+  "dependencies": {
+    "@agnost/core": "workspace:*",
+    "@opentelemetry/api": "^1.8.0"
+  },
+
+  "peerDependencies": {
+    "ai": ">=3.0.0"
+  },
+
+  "devDependencies": {
+    "ai": "^3.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  }
 }
