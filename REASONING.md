@@ -105,3 +105,12 @@ The dashboard successfully captured and grouped:
 - **Failed Tool Executions (`search_db` / database timeout)**: Captured latency (30000ms) and status (Failed / red state).
 
 ![Live Agnost Ingestion Dashboard](./assets/dashboard.png)
+
+---
+
+### AI Leverage & Tooling Disclosure
+
+I used AI tools as a developer leverage point to accelerate execution over this weekend:
+- **Boilerplate & Typings:** Generating TypeScript configuration templates, typing boilerplate, and linting configurations.
+- **Polishing & Documentation:** Formatting, checking for typos, and structuring the `README.md` and `REASONING.md` for maximum readability.
+- **Refinement:** Spotting minor syntax bugs during modular package refactoring.
